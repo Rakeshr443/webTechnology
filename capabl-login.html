@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>capabl</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav{
+            height: 12vh;
+            background-color: whitesmoke;
+
+        }
+        .login-1{
+            height: 88vh;
+        }
+        ol li{
+            display: inline-block;
+            padding: auto;
+            margin-top: 23px;
+        }
+        .l1{
+            margin-left:32%;
+            font-size: larger;
+        }
+        .l2{
+            margin-left: 5%;
+            font-size: larger;
+        }
+        .b0{
+            height:38px;
+            width: 85px;
+            font-family: sans-serif;
+            border-radius: 5px;
+            margin-right: 25px;   
+        }
+        .b0:hover{
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #signup{
+            background-color: #3183ff;
+            color: white;
+            font-size:14px;
+            font-weight:500;
+            padding:8px 16px;
+            border: none;
+        }
+        #login{
+            background-color: white;
+            color: #3183ff;
+            font-weight:700;
+            padding: 5px 15px;
+            border: 1px solid #3183ff;
+        }
+        .reg{
+            text-decoration: none;
+            color: black;
+            font-weight:400;
+            font-family: sans-serif;
+            font-size:17px;
+        }
+        .reg:hover{
+            cursor: pointer;
+            color: #3183ff;
+        }
+        h2{
+            text-align: center;
+            font-size: 30px;
+            font-family: sans-serif;
+            margin: 0 0 20px;
+        }
+        .in1,.b1{
+            padding: 16.5px 14px;
+            height:55px;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1.5px solid rgba(128, 128, 128, 0.688);
+        }
+        .b1{
+            background-color:#3183ff;
+            color:white ;
+            padding: 16px 24px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .form1{
+        margin:65px auto;
+        width: 64%;
+        border-radius: 8px;
+        background-color:white;
+        padding:40px 48px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        }
+        .logp{
+            font-size: 16px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .a1{
+            text-decoration: none;
+            color: #3183ff;
+        }
+        .in1::placeholder{
+            font-size: 16px;
+        }
+        .p2{
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .in1:hover{
+            border: 1.5px solid black;
+        }
+        .in1:focus{
+            border: 1.5PX solid #3183ff;
+            outline: 1px solid #3183ff
+        }
+        .divsig{
+            height: 88vh;
+            justify-content: center;
+        }
+        /* ol li{
+            display: inline-block;
+            padding: auto;
+            margin-top: 23px;
+        }
+        .l1{
+            margin-left:32%;
+            font-size: larger;
+        }
+        .l2{
+            margin-left: 5%;
+            font-size: larger;
+        }     */
+        .h2r{
+            text-align: center;
+            font-size: 30px;
+            font-family: sans-serif;
+            margin: 0 0 20px;
+        }
+        .inr,.br1{
+            padding: 16.5px 14px;
+            height:55px;
+            width: 50%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1.5px solid rgba(128, 128, 128, 0.688);
+            align-items: center;
+            margin-left: 220px;
+        }
+        .br1{
+            background-color:#3183ff;
+            color:white ;
+            padding: 16px 24px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .form2{
+        margin:65px auto;
+        width: 64%;
+        border-radius: 8px;
+        background-color:white;
+        padding:40px 48px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        }
+        .inr::placeholder{
+            font-size: 16px;
+        }
+        
+        .inr:hover{
+            border: 1.5px solid black;
+        }
+        .inr:focus{
+            border: 1.5PX solid #3183ff;
+            outline: 1px solid #3183ff
+        }
+        .br1:hover{
+            box-shadow: 0 0 5px rgba(128, 128, 128, 0.43);
+
+        }
+        .al{
+            text-decoration: none;
+            color: blue;
+        }
+        #p4{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ol>
+            <li class="l1"><a class="reg">Registered Bathces</a></li>
+            <li class="l2"><a class="reg" href="">Assignment Links</a></li>
+            <li style="float: right;"><a href="#divreg"><button class="b0" id="signup">Sign Up</button></a></li>
+            <li style="float: right;"><button class="b0" id="login" >Login</button></li>
+        </ol>
+    </nav>
+    <div class="login-1">
+        
+        <form action="" class="form1"  id="divlog">
+            <h2>Login</h2>
+            <input class="in1" type="email"placeholder="Username/Email">
+            <input class="in1" type="password" placeholder="password">
+            <button class="b1">Login</button>
+            <p class="logp">Don't have an account? <a class="a1" href="#divreg">Register here</a></p>
+            <p class="p2">Forgot Password? <a class="a1" href="">Reset now</a></p>
+        </form>
+    </div>
+    <div class="divsig" id="divreg">
+        <form class="form2" action="">
+            <h2 class="h2r">Register Now</h2>
+            <input class="inr" type="text"placeholder="Username">
+            <input class="inr" type="email"placeholder="Email">
+            <input class="inr" type="password" placeholder="Set Password">
+            <input class="inr" type="password" placeholder="Confirm Password">
+            <button class="br1">Register</button>
+            <p id="p4">Already Registered? <a class="al" href="#divlog">Login</a></p>
+        </form>
+    </div>
+</body>
+</html>
