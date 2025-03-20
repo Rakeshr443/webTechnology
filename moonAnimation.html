@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            width: 100vw;
+            height: 100vh;
+            background-image: url('/assests/images/mountains.png'),url('/assests/images/mountains.png'),url('/assests/images/mountains.png'),url('/assests/images/mountains.png'),url('/assests/images/mooon.png'),url('/assests/images/space.jpg');
+            background-repeat:no-repeat,no-repeat,no-repeat, no-repeat,no-repeat,no-repeat;
+            background-size:55%, 55%, 35%, 35%, 12%, cover;
+            background-position:-200px 206px, 827px 202px,555px 345px,348px 339px,635px 1320px,center;
+            transition: all 2s;
+            
+            
+        }
+        div:hover{
+            background-size:40%, 40%, 30%, 30%, 12%, cover;
+            background-position:-87px 312px, 980px 312px,720px 400px,310px 400px,635px 121px,center
+
+
+        }
+        h1{
+            font-size: 90px;
+            color: white;
+            padding-left: 37%;
+            padding-top: 20%;
+            font-family: cursive;
+            text-shadow: 5px 5px 10px yellow,-5px -5px 10px lawngreen;
+            transform: scale(0) rotatex(175deg) rotatey(175deg) rotate(360deg);
+            transition: all 2s;
+        }
+        div:hover h1{
+            transform: scale(1) rotatex(0deg) rotatey(0deg) rotate(360deg);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>MOON</h1>
+
+    </div>
+</body>
+</html>
