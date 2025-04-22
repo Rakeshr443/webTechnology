@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            display: flex;
+            border: 2px solid black;
+            height: 200px;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            position: absolute;
+            border-radius: 50%;
+
+        }
+        #pp {
+        background-color: aqua;
+        height: 5px;
+        display: block;
+        width: 30%;
+        position: absolute; 
+        top: 50%; 
+        left: 50%; 
+        transform-origin: 0% 50%; 
+        transform: translate(-50%, -50%);
+    }
+    #pm {
+        background-color: aquamarine;
+        height: 5px;
+        display: block;
+        width: 25%;
+        position: absolute; 
+        top: 50%; 
+        left: 50%; 
+        transform-origin: 0% 50%;
+        transform: translate(-50%, -50%);
+    }
+    #ph {
+        background-color: palevioletred;
+        height: 5px;
+        display: block;
+        width: 18%;
+        position: absolute; 
+        top: 50%; 
+        left: 50%; 
+        transform-origin: 0% 50%; 
+        transform: translate(-50%, -50%);
+    }
+        
+    #sp1 {
+        position: absolute;
+        top: 10px; 
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #sp2 {
+        position: absolute;
+        top: 50%;
+        left: 185px;
+        transform: translateY(-50%);
+    }
+    #sp3 {
+        position: absolute;
+        bottom: 10px; 
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #sp4 {
+        position: absolute;
+        top: 50%;
+        left: 10px; 
+        transform: translateY(-50%);
+    }
+</style>
+</head>
+<body>
+    <div>
+        <p id="pp"></p>
+        <p id="ph"></p>
+        <p id="pm"></p>
+        <span id="sp1">12</span>
+        <span id="sp2">3</span>
+        <span id="sp3">6</span>
+        <span id="sp4">9</span>  
+
+    </div>
+
+    <script>
+        var d
+        var sec=document.getElementById('pp')
+        var min=document.getElementById('pm')
+        var hrs=document.getElementById('ph')
+        function fun(){
+            var date=new Date()
+            var h=date.getHours()
+            var m=date.getMinutes()
+            var s=date.getSeconds()
+            d=s*6+270
+            x=m*6+270
+            y=h*15+270
+            
+            hrs.style.transform=`rotate(${y}deg)`
+            min.style.transform=`rotate(${x}deg)`
+            // console.log(h);
+            
+            // console.log(m);
+
+            sec.style.transform=`rotate(${d}deg)`
+            // console.log(s);
+            
+        }
+        setInterval(fun,1000)
+        
+
+    </script>
+   
+</body>
+</html>
