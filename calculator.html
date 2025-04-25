@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 255, 255, 0.389);
+        }
+        .cont{
+            /* border: 2px solid black; */
+            height: 260px;
+            width: 180px;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px gray;
+            background-color:cyan;
+        }
+        .display{
+            width: 100%;
+            height: 45px;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 5px;
+            margin-bottom: 10px;
+            background-color: rgba(127, 255, 212, 0.779);
+        
+        }
+        .display input{
+            height: 35px;
+            width: 98%;
+            padding-left: 5px;
+            text-align: right;
+            border: none;
+        }
+        .spl,.number,.number1{
+            width: 37px;
+            height: 35px;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        .spl1{
+            width: 70px;
+            height: 35px;
+            border-radius: 10px;
+
+        }
+        .spl,.number1{
+            background-color: rgba(255, 166, 0, 0.716);
+        }
+        .spl1{
+            background-color: red;
+        }
+        input:hover{
+            background-color: rgba(255, 105, 180, 0.647);
+        }
+       #disp:hover{
+        background-color: rgba(127, 255, 212, 0.779);
+       }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="cont">
+       
+        <form>
+            <div class="display">
+                <input type="text" name="dis" disabled id="disp">
+            </div>
+           
+            <table>
+                <tr>
+                    <th> <input type="button" value="AC" class="spl" onclick="dis.value=''"></th>
+                    <th><input type="button" value="Del" class="spl" onclick="dis.value=dis.value.toString().slice(0,-1)"></th>
+                    <th><input type="button" value="." class="spl" onclick="dis.value +='.'"></th>
+                    <th><input type="button" value="/" class="spl" onclick="dis.value +='/'"></th>
+                </tr>
+                <tr>
+                    <th><input type="button" value="7" class="number" onclick="dis.value +='7'"></th>
+                    <th><input type="button" value="8" class="number" onclick="dis.value +='8'"></th>
+                    <th><input type="button" value="9" class="number" onclick="dis.value +='9'"></th>
+                    <th><input type="button" value="*" class="spl" onclick="dis.value +='*'"></th>
+                </tr>
+                <tr>
+                    <th><input type="button" value="4" class="number" onclick="dis.value +='4'"></th>
+                    <th><input type="button" value="5" class="number" onclick="dis.value +='5'"></th>
+                    <th><input type="button" value="6" class="number" onclick="dis.value +='6'"></th>
+                    <th><input type="button" value="-" class="spl" onclick="dis.value +='-'"></th>
+                </tr>
+                <tr>
+                    <th><input type="button" value="1" class="number" onclick="dis.value +='1'"></th>
+                    <th><input type="button" value="2" class="number" onclick="dis.value +='2'"></th>
+                    <th><input type="button" value="3" class="number" onclick="dis.value +='3'"></th>
+                    <th><input type="button" value="+" class="spl" onclick="dis.value +='+'"></th>
+                </tr>
+                <tr>
+                    <th> <input type="button" value="00" class="number1" onclick="dis.value +='00'"></th>
+                    <th><input type="button" value="0" class="number1" onclick="dis.value +='0'"></th>
+                    <th colspan="2"><input type="button" value="=" class="spl1" onclick="dis.value =eval(dis.value)"></th>
+                    
+                </tr>
+            </table>
+        </form>
+
+    </div>
+</body>
+</html>
