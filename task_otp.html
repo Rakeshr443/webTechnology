@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+
+        }
+        body{
+            /* background-color: aliceblue; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+           
+            background-color:whitesmoke;
+        }
+        div{
+            background-color:aliceblue;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+        input{
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 10px;
+            /* width: 100%; */
+        }
+        #inn{
+            height: 25px;
+            margin-bottom: 15px;
+        }
+        #sub:disabled{
+            cursor: not-allowed;
+        }
+        #gen{
+            background-color:rgba(128, 128, 128, 0.312);
+        }
+        p{
+            margin-bottom: 5px;
+            font-size: 15px;
+            /* color: rgb(60, 229, 60); */
+        }
+    </style>
+</head>
+<body>
+    <div>
+     
+        <input type="text" placeholder="enter otp" id="inn" oninput="fun()">
+        <p id="par"></p>
+        <a href="https://www.linkedin.com/feed/"><input type="submit" id="sub" disabled="true"><br></a>
+        <input type="submit" value="Generate OTP" id="gen" onclick="gen_otp()">
+    </div>
+    <script>
+        var msg=document.getElementById('par')
+        let otp=null;
+        var input_box=document.getElementById('inn')
+        var sub_btn=document.getElementById('sub')
+
+        function gen_otp(){
+            var a=[]
+            for(i=0;i<4;i++){
+                a.push(Math.trunc(Math.random()*10))
+            }
+            var x=a.join('')
+            otp=x
+            window.alert('otp is: '+otp)
+        }
+        function fun(){
+            var s=input_box.value
+            if (otp==s && s.length==4){
+                msg.innerHTML='valid'
+                msg.style.color='green'
+                sub_btn.setAttribute('disabled',false)
+                sub_btn.style.backgroundColor='rgb(60, 229, 60)'
+                sub_btn.style.color='white'
+                sub_btn.style.cursor='pointer'
+            }
+            else{
+                msg.innerHTML='invalid'
+                msg.style.color='red'
+                sub_btn.setAttribute('disabled',true)
+            }
+            
+        }
+    </script>
+</body>
+</html>
